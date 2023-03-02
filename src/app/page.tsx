@@ -4,6 +4,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 import logo from '../assests/logo.svg'
+import thumbYoutube from '../assests/thumb-youtube.png'
 import {
   List,
   MagnifyingGlass,
@@ -11,6 +12,13 @@ import {
   VideoCamera,
   SquaresFour,
   Bell,
+  House,
+  Compass,
+  Play,
+  ClockCounterClockwise,
+  ThumbsUp,
+  Clock,
+  CaretDown,
 } from 'phosphor-react'
 
 export default function Home() {
@@ -53,64 +61,354 @@ export default function Home() {
           />
         </div>
       </header>
-      <aside>
-        <nav>
-          <Link href="/">Home</Link>
-          <Link href="/">Explore</Link>
-          <Link href="/">Subscriptions</Link>
-        </nav>
-        <nav>
-          <Link href="/">Library</Link>
-          <Link href="/">History</Link>
-          <Link href="/">Your Videos</Link>
-          <Link href="/">Watch Later</Link>
-          <Link href="/">Liked Videos</Link>
-        </nav>
-        <nav>
-          <strong>Subinscriptions</strong>
+      <div className="flex h-full min-h-screen">
+        <aside className="flex flex-col w-[240px]  pr-4 bg-[#212121] overflow-y-auto">
+          <nav className="flex flex-col py-3 border-b border-[#303030]">
+            <Link href="/" className="flex items-center gap-6 py-2 px-6">
+              <House size={18} />
+              Home
+            </Link>
+            <Link href="/" className="flex items-center gap-6 py-2 px-6">
+              <Compass size={18} />
+              Explore
+            </Link>
+            <Link href="/" className="flex items-center gap-6 py-2 px-6">
+              <Play size={18} />
+              Subscriptions
+            </Link>
+          </nav>
+          <nav className="flex flex-col py-3 border-b border-[#303030]">
+            <Link href="/" className="flex items-center gap-6 py-2 px-6">
+              Library
+            </Link>
+            <Link href="/" className="flex items-center gap-6 py-2 px-6">
+              <ClockCounterClockwise />
+              History
+            </Link>
+            <Link href="/" className="flex items-center gap-6 py-2 px-6">
+              <Play />
+              Your Videos
+            </Link>
+            <Link href="/" className="flex items-center gap-6 py-2 px-6">
+              <Clock />
+              Watch Later
+            </Link>
+            <Link href="/" className="flex items-center gap-6 py-2 px-6">
+              <ThumbsUp />
+              Liked Videos
+            </Link>
+          </nav>
 
-          <Link href="/">
-            <Image
-              src="https://www.github.com/brunosllz.png"
-              alt="bruno Luiz"
-              width={24}
-              height={24}
-            />
+          <div className="flex flex-col py-3 border-b border-[#303030]">
+            <strong className="text-sm font-bold text-[#AAAAAA] uppercase p-6 py-2">
+              Subscriptions
+            </strong>
 
-            <span>Bruno Luiz</span>
-          </Link>
-        </nav>
-      </aside>
-      <div>
-        <a href="#" />
-        <a href="#" />
-        <a href="#" />
-        <a href="#" />
-        <a href="#" />
-      </div>
+            <nav className="flex flex-col">
+              <Link href="/" className="flex items-center px-6 py-2 gap-6">
+                <Image
+                  src="https://www.github.com/brunosllz.png"
+                  alt="bruno Luiz"
+                  width={24}
+                  height={24}
+                />
 
-      <main>
-        <div>
-          <div></div>
-          <div>
-            <Image
-              src="https://www.github.com/brunosllz.png"
-              alt="bruno Luiz"
-              width={24}
-              height={24}
-            />
-            <div>
-              <strong>
-                Lorem ipsum dolor sit amet, consecte adipiscing elit.
-              </strong>
-              <div>
-                <span>Gouse</span>
-                <span>15K Views .1 week ago</span>
+                <span className="text-sm">Bruno Luiz</span>
+              </Link>
+              <Link href="/" className="flex items-center px-6 py-2 gap-6">
+                <Image
+                  src="https://www.github.com/brunosllz.png"
+                  alt="bruno Luiz"
+                  width={24}
+                  height={24}
+                />
+
+                <span className="text-sm">Bruno Luiz</span>
+              </Link>
+              <Link href="/" className="flex items-center px-6 py-2 gap-6">
+                <CaretDown size={12} />
+
+                <span className="text-sm">Show 13 more</span>
+              </Link>
+            </nav>
+          </div>
+        </aside>
+
+        <main className="w-full h-full">
+          <nav className="flex items-center gap-3 px-6 py-3 border-t border-b border-[#303030] bg-[#212121]">
+            <Link
+              href="#"
+              className="flex items-center justify-center text-sm px-3 py-1 bg-[#303030] border border-[#AAAAAA] rounded-2xl"
+            >
+              All
+            </Link>
+            <Link
+              href="#"
+              className="flex items-center justify-center text-sm px-3 py-1 bg-[#303030] border border-[#AAAAAA] rounded-2xl"
+            >
+              Item
+            </Link>
+            <Link
+              href="#"
+              className="flex items-center justify-center text-sm px-3 py-1 bg-[#303030] border border-[#AAAAAA] rounded-2xl"
+            >
+              Item
+            </Link>
+            <Link
+              href="#"
+              className="flex items-center justify-center text-sm px-3 py-1 bg-[#303030] border border-[#AAAAAA] rounded-2xl"
+            >
+              Item
+            </Link>
+            <Link
+              href="#"
+              className="flex items-center justify-center text-sm px-3 py-1 bg-[#303030] border border-[#AAAAAA] rounded-2xl"
+            >
+              Item
+            </Link>
+            <Link
+              href="#"
+              className="flex items-center justify-center text-sm px-3 py-1 bg-[#303030] border border-[#AAAAAA] rounded-2xl"
+            >
+              Item
+            </Link>
+          </nav>
+
+          <div className="grid grid-cols-4 gap-4 p-6 h-full">
+            <div className="flex flex-col w-full">
+              <div className="w-full h-full">
+                <Image
+                  src={thumbYoutube}
+                  alt="thumb youtube"
+                  width={276}
+                  height={155}
+                  className="object-cover aspect-auto rounded-lg w-full h-full"
+                />
+              </div>
+              <div className="grid grid-cols-[48px_1fr] mt-4 items-start pr-5">
+                <div>
+                  <Image
+                    src="https://www.github.com/brunosllz.png"
+                    alt="bruno Luiz"
+                    width={36}
+                    height={36}
+                    className="object-cover aspect-auto"
+                  />
+                </div>
+                <div className="flex flex-col gap-[0.375rem]">
+                  <strong className="text-xs leading-tight font-bold">
+                    Lorem ipsum dolor sit amet, consecte adipiscing elit.
+                  </strong>
+                  <div className="flex flex-col">
+                    <span className="text-sm text-[#AAAAAA]">Gouse</span>
+                    <span className="text-sm text-[#AAAAAA]">
+                      15K Views .1 week ago
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col w-full">
+              <div className="w-full h-full">
+                <Image
+                  src={thumbYoutube}
+                  alt="thumb youtube"
+                  width={276}
+                  height={155}
+                  className="object-cover aspect-auto rounded-lg w-full h-full"
+                />
+              </div>
+              <div className="grid grid-cols-[48px_1fr] mt-4 items-start pr-5">
+                <div>
+                  <Image
+                    src="https://www.github.com/brunosllz.png"
+                    alt="bruno Luiz"
+                    width={36}
+                    height={36}
+                    className="object-cover aspect-auto"
+                  />
+                </div>
+                <div className="flex flex-col gap-[0.375rem]">
+                  <strong className="text-xs leading-tight font-bold">
+                    Lorem ipsum dolor sit amet, consecte adipiscing elit.
+                  </strong>
+                  <div className="flex flex-col">
+                    <span className="text-sm text-[#AAAAAA]">Gouse</span>
+                    <span className="text-sm text-[#AAAAAA]">
+                      15K Views .1 week ago
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col w-full">
+              <div className="w-full h-full">
+                <Image
+                  src={thumbYoutube}
+                  alt="thumb youtube"
+                  width={276}
+                  height={155}
+                  className="object-cover aspect-auto rounded-lg w-full h-full"
+                />
+              </div>
+              <div className="grid grid-cols-[48px_1fr] mt-4 items-start pr-5">
+                <div>
+                  <Image
+                    src="https://www.github.com/brunosllz.png"
+                    alt="bruno Luiz"
+                    width={36}
+                    height={36}
+                    className="object-cover aspect-auto"
+                  />
+                </div>
+                <div className="flex flex-col gap-[0.375rem]">
+                  <strong className="text-xs leading-tight font-bold">
+                    Lorem ipsum dolor sit amet, consecte adipiscing elit.
+                  </strong>
+                  <div className="flex flex-col">
+                    <span className="text-sm text-[#AAAAAA]">Gouse</span>
+                    <span className="text-sm text-[#AAAAAA]">
+                      15K Views .1 week ago
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col w-full">
+              <div className="w-full h-full">
+                <Image
+                  src={thumbYoutube}
+                  alt="thumb youtube"
+                  width={276}
+                  height={155}
+                  className="object-cover aspect-auto rounded-lg w-full h-full"
+                />
+              </div>
+              <div className="grid grid-cols-[48px_1fr] mt-4 items-start pr-5">
+                <div>
+                  <Image
+                    src="https://www.github.com/brunosllz.png"
+                    alt="bruno Luiz"
+                    width={36}
+                    height={36}
+                    className="object-cover aspect-auto"
+                  />
+                </div>
+                <div className="flex flex-col gap-[0.375rem]">
+                  <strong className="text-xs leading-tight font-bold">
+                    Lorem ipsum dolor sit amet, consecte adipiscing elit.
+                  </strong>
+                  <div className="flex flex-col">
+                    <span className="text-sm text-[#AAAAAA]">Gouse</span>
+                    <span className="text-sm text-[#AAAAAA]">
+                      15K Views .1 week ago
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col w-full">
+              <div className="w-full h-full">
+                <Image
+                  src={thumbYoutube}
+                  alt="thumb youtube"
+                  width={276}
+                  height={155}
+                  className="object-cover aspect-auto rounded-lg w-full h-full"
+                />
+              </div>
+              <div className="grid grid-cols-[48px_1fr] mt-4 items-start pr-5">
+                <div>
+                  <Image
+                    src="https://www.github.com/brunosllz.png"
+                    alt="bruno Luiz"
+                    width={36}
+                    height={36}
+                    className="object-cover aspect-auto"
+                  />
+                </div>
+                <div className="flex flex-col gap-[0.375rem]">
+                  <strong className="text-xs leading-tight font-bold">
+                    Lorem ipsum dolor sit amet, consecte adipiscing elit.
+                  </strong>
+                  <div className="flex flex-col">
+                    <span className="text-sm text-[#AAAAAA]">Gouse</span>
+                    <span className="text-sm text-[#AAAAAA]">
+                      15K Views .1 week ago
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col w-full">
+              <div className="w-full h-full">
+                <Image
+                  src={thumbYoutube}
+                  alt="thumb youtube"
+                  width={276}
+                  height={155}
+                  className="object-cover aspect-auto rounded-lg w-full h-full"
+                />
+              </div>
+              <div className="grid grid-cols-[48px_1fr] mt-4 items-start pr-5">
+                <div>
+                  <Image
+                    src="https://www.github.com/brunosllz.png"
+                    alt="bruno Luiz"
+                    width={36}
+                    height={36}
+                    className="object-cover aspect-auto"
+                  />
+                </div>
+                <div className="flex flex-col gap-[0.375rem]">
+                  <strong className="text-xs leading-tight font-bold">
+                    Lorem ipsum dolor sit amet, consecte adipiscing elit.
+                  </strong>
+                  <div className="flex flex-col">
+                    <span className="text-sm text-[#AAAAAA]">Gouse</span>
+                    <span className="text-sm text-[#AAAAAA]">
+                      15K Views .1 week ago
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col w-full">
+              <div className="w-full h-full">
+                <Image
+                  src={thumbYoutube}
+                  alt="thumb youtube"
+                  width={276}
+                  height={155}
+                  className="object-cover aspect-auto rounded-lg w-full h-full"
+                />
+              </div>
+              <div className="grid grid-cols-[48px_1fr] mt-4 items-start pr-5">
+                <div>
+                  <Image
+                    src="https://www.github.com/brunosllz.png"
+                    alt="bruno Luiz"
+                    width={36}
+                    height={36}
+                    className="object-cover aspect-auto"
+                  />
+                </div>
+                <div className="flex flex-col gap-[0.375rem]">
+                  <strong className="text-xs leading-tight font-bold">
+                    Lorem ipsum dolor sit amet, consecte adipiscing elit.
+                  </strong>
+                  <div className="flex flex-col">
+                    <span className="text-sm text-[#AAAAAA]">Gouse</span>
+                    <span className="text-sm text-[#AAAAAA]">
+                      15K Views .1 week ago
+                    </span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </main>
+        </main>
+      </div>
     </div>
   )
 }
