@@ -24,8 +24,8 @@ import {
 export default function Home() {
   return (
     <div className="w-full min-h-screen bg-black">
-      <header className="w-full py-2 px-4 flex items-center justify-between bg-[#212121]">
-        <div className="flex gap-2 items-center">
+      <header className="w-full py-2 px-6 flex items-center justify-between bg-[#212121]">
+        <div className="flex gap-6 items-center">
           <List size={24} />
           <Image src={logo} alt="youtube" />
         </div>
@@ -48,9 +48,9 @@ export default function Home() {
         </div>
         <div className="flex gap-4 items-center">
           <div className="flex items-center gap-3">
-            <VideoCamera size={24} />
-            <SquaresFour size={24} />
-            <Bell size={24} />
+            <VideoCamera size={22} />
+            <SquaresFour size={22} />
+            <Bell size={22} />
           </div>
           <Image
             src="https://www.github.com/brunosllz.png"
@@ -126,7 +126,9 @@ export default function Home() {
                 <span className="text-sm">Bruno Luiz</span>
               </Link>
               <Link href="/" className="flex items-center px-6 py-2 gap-6">
-                <CaretDown size={12} />
+                <div className="w-6 h-6 flex items-center justify-center">
+                  <CaretDown size={12} />
+                </div>
 
                 <span className="text-sm">Show 13 more</span>
               </Link>
