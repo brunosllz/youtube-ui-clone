@@ -13,7 +13,7 @@ import logo from '../assets/logo.svg'
 
 export function Header() {
   return (
-    <header className="w-full py-2 px-6 flex items-center justify-between bg-[#212121]">
+    <header className="w-full py-2 px-6 flex items-center justify-between bg-[#212121] fixed">
       <div className="flex gap-6 items-center">
         <List size={24} />
         <Image src={logo} alt="youtube" />
