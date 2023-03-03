@@ -2,6 +2,7 @@
 import { ReactNode } from 'react'
 
 import '../styles/global.css'
+import { Header } from '../Components/Header'
 
 export const metadata = {
   title: 'Youtube UI',
@@ -23,7 +24,10 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           rel="stylesheet"
         />
       </head>
-      <body>{children}</body>
+      <body>
+        <Header />
+        <main>{children}</main>
+      </body>
     </html>
   )
 }
