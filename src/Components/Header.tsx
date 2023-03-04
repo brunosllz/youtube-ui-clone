@@ -1,5 +1,6 @@
 'use client'
 
+import { useShortSidebar } from '@/hooks/useShortSidebar'
 import Image from 'next/image'
 import {
   Bell,
@@ -12,10 +13,19 @@ import {
 import logo from '../assets/logo.svg'
 
 export function Header() {
+  const { setShortSidebar } = useShortSidebar()
+
+  function handleSetShortSidebar() {
+    setShortSidebar()
+  }
+
   return (
     <header className="w-full py-2 px-6 flex items-center justify-between bg-[#212121] fixed">
       <div className="flex gap-6 items-center">
-        <List size={24} />
+        <button onClick={handleSetShortSidebar}>
+          <List size={24} />
+        </button>
+
         <Image src={logo} alt="youtube" />
       </div>
       <div className="flex items-center gap-1 min-w-[470px]">
