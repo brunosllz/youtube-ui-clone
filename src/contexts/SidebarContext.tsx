@@ -1,4 +1,5 @@
-import { createContext, ReactNode, useState } from 'react'
+import { ReactNode, useCallback, useState } from 'react'
+import { createContext } from 'use-context-selector'
 
 interface SidebarContextProps {
   isShortSidebar: boolean
@@ -16,11 +17,11 @@ export function SidebarContextProvider({
 }: SidebarContextProviderProps) {
   const [isShortSidebar, setIsShortSidebar] = useState(false)
 
-  function setShortSidebar() {
+  const setShortSidebar = useCallback(() => {
     setIsShortSidebar((state) => {
       return !state
     })
-  }
+  }, [])
 
   return (
     <SidebarContext.Provider value={{ setShortSidebar, isShortSidebar }}>

@@ -1,8 +1,10 @@
 import { SidebarContext } from '@/contexts/SidebarContext'
-import { useContext } from 'react'
+import { useContextSelector } from 'use-context-selector'
 
 export function useShortSidebar() {
-  const context = useContext(SidebarContext)
+  const context = useContextSelector(SidebarContext, (context) => {
+    return context
+  })
 
   return context
 }
