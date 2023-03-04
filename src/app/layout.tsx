@@ -2,8 +2,7 @@
 import { ReactNode } from 'react'
 
 import '../styles/global.css'
-import { Header } from '../Components/Header'
-import { Sidebar } from '@/Components/Sidebar'
+import { DefaultLayout } from '@/layouts/DefaultLayout'
 
 export const metadata = {
   title: 'Youtube UI',
@@ -26,11 +25,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         />
       </head>
       <body className="bg-black">
-        <Header />
-        <div className="flex pt-[3.625rem]">
-          <Sidebar />
-          <main className="">{children}</main>
-        </div>
+        <DefaultLayout>
+          <main>{children}</main>
+        </DefaultLayout>
       </body>
     </html>
   )
