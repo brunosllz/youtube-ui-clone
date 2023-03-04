@@ -12,8 +12,8 @@ export function Layout({ children }: LayoutProps) {
   return (
     <div
       className={clsx('flex flex-[1_1_auto] overflow-hidden pt-[3.625rem]', {
-        'pl-[240px]': !isShortSidebar,
-        'pl-[70px]': isShortSidebar,
+        'pl-[15rem]': !isShortSidebar,
+        'pl-[4.375rem]': isShortSidebar,
       })}
     >
       <div className="flex flex-[1_1_auto] overflow-hidden">

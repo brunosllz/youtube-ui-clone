@@ -24,7 +24,7 @@ export function Sidebar() {
   return (
     <aside
       className={clsx(
-        'flex flex-col h-screen bg-[#212121] overflow-y-auto fixed mt-[3.625rem]',
+        'flex flex-col h-screen bg-[#212121] overflow-y-auto fixed mt-[3.5625rem]',
         {
           'p-1 items-center ': isShortSidebar,
           'w-[240px] pr-4': !isShortSidebar,
