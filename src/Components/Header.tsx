@@ -1,6 +1,7 @@
 'use client'
 
 import { useShortSidebar } from '@/hooks/useShortSidebar'
+
 import Image from 'next/image'
 import {
   Bell,
@@ -51,6 +52,7 @@ export function Header() {
           <SquaresFour size={22} />
           <Bell size={22} />
         </div>
+
         <Image
           src="https://www.github.com/brunosllz.png"
           alt="bruno Luiz"

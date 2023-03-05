@@ -27,7 +27,7 @@ export function Sidebar() {
         'flex flex-col h-screen bg-[#212121] overflow-y-auto fixed mt-[3.5625rem]',
         {
           'p-1 items-center ': isShortSidebar,
-          'w-[240px] pr-4': !isShortSidebar,
+          'w-[240px] pr-4 pb-20': !isShortSidebar,
         },
       )}
     >
@@ -103,6 +103,48 @@ export function Sidebar() {
 
                 <span className="text-sm">Show 13 more</span>
               </Link>
+            </nav>
+          </div>
+          <div className="flex flex-col py-3 border-b border-[#303030]">
+            <strong className="text-sm font-bold text-[#AAAAAA] uppercase p-6 py-2">
+              More from youtube
+            </strong>
+
+            <nav className="flex flex-col">
+              <Navlink title="Youtube Premium" href="/youtube-premium">
+                <Play />
+              </Navlink>
+
+              <Navlink title="Gaming" href="/gaming">
+                <ClockCounterClockwise />
+              </Navlink>
+
+              <Navlink title="Live" href="/live">
+                <Play />
+              </Navlink>
+
+              <Navlink title="Sports" href="/sports">
+                <Clock />
+              </Navlink>
+            </nav>
+          </div>
+          <div className="flex flex-col py-3 border-b border-[#303030]">
+            <nav className="flex flex-col">
+              <Navlink title="settings" href="/settings">
+                <Play />
+              </Navlink>
+
+              <Navlink title="Report history" href="/report-history">
+                <ClockCounterClockwise />
+              </Navlink>
+
+              <Navlink title="Help" href="/help">
+                <Play />
+              </Navlink>
+
+              <Navlink title="Send feedback" href="/send-feedback">
+                <Clock />
+              </Navlink>
             </nav>
           </div>
         </>
